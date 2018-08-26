@@ -1,0 +1,83 @@
+type Query {
+    people(name: String, page: Int): Person,
+    starships(name: String, page: Int): Starship,
+    planets(name: String, page: Int): Planet
+}
+
+type Person {
+    count: Int,
+    previous: String,
+    next: String,
+    results: [PersonResult]
+}
+
+type PersonResult {
+    name: String,
+    height: String,
+    mass: String,
+    hair_color: String,
+    skin_color: String,
+    eye_color: String,
+    birth_year: String,
+    gender: String,
+    homeworld: String,
+    films: [String],
+    species: [String],
+    vehicles: [String],
+    starships: [String],
+    created: String,
+    edited: String,
+    url: String
+}
+
+type Planet {
+    count: Int!,
+    next: String,
+    previous: String,
+    results: [PlanetResult]
+}
+
+type PlanetResult {
+    name: String,
+    rotation_period: String,
+    orbital_period: String,
+    diameter: String,
+    climate: String,
+    gravity: String,
+    terrain: String,
+    surface_water: String,
+    population: String,
+    residents: [String],
+    films: [String],
+    created: String,
+    edited: String,
+    url: String,
+}
+
+type Starship {
+    count: Int!,
+    previous: String,
+    next: String,
+    results: [StarshipResult]
+}
+
+type StarshipResult {
+    name: String,
+    model: String,
+    manufacturer: String,
+    cost_in_credits: String,
+    length: String,
+    max_atmosphering_speed: String,
+    crew: String,
+    passengers: String,
+    cargo_capacity: String,
+    consumables: String,
+    hyperdrive_rating: String,
+    MGLT: String,
+    starship_class: String,
+    pilots: [String],
+    films: [String],
+    created: String,
+    edited: String,
+    url: String,
+}
